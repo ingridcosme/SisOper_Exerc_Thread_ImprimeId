@@ -1,0 +1,21 @@
+/*
+ * Fazer uma aplicação que rode 5 Threads que cada uma delas imprima no console 
+ * o seu número. O número que deve ser impresso é a saída da operação 
+ * int id = getId() da Thread.
+ */
+
+package view;
+
+import controller.ThreadId;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		for(int id = 0 ; id < 5 ; id++) {
+			Thread imprimeId = new ThreadId(id);
+			imprimeId.start();
+		}
+
+	}
+
+}
